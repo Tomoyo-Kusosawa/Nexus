@@ -68,3 +68,4 @@ npm run dev
 
 ## 🤝 贡献与开源
 NexusOS 欢迎任何形式的贡献！提交 Issue 反馈 Bug，或开启 Pull Request 改进系统。
+> 反馈地址 📧：1539724046@qq.com
