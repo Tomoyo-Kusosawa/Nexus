@@ -1,6 +1,6 @@
 {
   "version": "v1.0.1",
-  "notes": "1. 新增了论文工坊(Beta),正在测试中...\n2. 优化了系统性能,提升了整体运行速度\n3. 修复了若干已知Bug\n 目前存在的已知Bug：\n1.关闭主窗口时，退出偏好设置（最小化/彻底退出）无法持久化保存的问题。\n更新时间2026.08.05",
+  "notes": "1. 新增了论文工坊(Beta),正在测试中...\n2. 优化了系统性能,提升了整体运行速度\n3. 修复了若干已知Bug\n 目前存在的已知Bug：\n1.关闭主窗口时，退出偏好设置（最小化/彻底退出）无法持久化保存的问题。\n更新时间:2026.08.05",
   "download_url": "https://github.com/Tomoyo-Kusosawa/Nexus/releases/download/NexusOS/NexusOS_Setup_v1.0.1.exe",
   "date": "2026-08-05"
 }
