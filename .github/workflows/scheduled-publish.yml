@@ -1,0 +1,41 @@
+name: 定时公布版本
+
+on:
+  schedule:
+    # 8月19日 20:00 (UTC) = 8月20日 04:00 (北京时间)
+    - cron: '0 20 19 8 *'
+  workflow_dispatch: # 同时也保留手动在网页端点击触发的按钮
+
+jobs:
+  publish-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查待发布的草稿并自动转为正式公开版
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // 1. 获取仓库中的 Releases（包含 Draft 草稿）
+            const releases = await github.rest.repos.listReleases({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            
+            // 2. 查找处于 Draft 状态的 Release
+            const draftRelease = releases.data.find(r => r.draft === true);
+            
+            if (draftRelease) {
+              console.log(`正在公布版本: ${draftRelease.name} (${draftRelease.tag_name})`);
+              
+              // 3. 将 draft 设为 false 正式对外公布
+              await github.rest.repos.updateRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: draftRelease.id,
+                draft: false,
+                make_latest: 'true'
+              });
+              
+              console.log('🎉 8月20日 04:00 定时发布成功！');
+            } else {
+              console.log('未检测到待发布的草稿 (Draft)，跳过发布。');
+            }
