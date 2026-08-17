@@ -3,7 +3,7 @@ name: 定时公布版本
 on:
   schedule:
     # 8月19日 20:00 (UTC) = 8月20日 04:00 (北京时间)
-    - cron: '0 20 19 8 *'
+    - cron: '0 16 19 8 *'
   workflow_dispatch: # 同时也保留手动在网页端点击触发的按钮
 
 jobs:
