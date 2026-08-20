@@ -1,71 +1,109 @@
-# 🌌 NexusOS - 科研一体化平台
+<div align="center">
+  <img src="docs/logo.png" alt="NexusOS Logo" width="130" />
+  <h1>🚀 NexusOS</h1>
+  <p><strong>The Ultimate AI-Native Personal Research & Learning Operating System</strong></p>
 
-> 告别碎片化的科研工具，将论文、代码、数据、笔记与日程统统收纳进一个私密、安全、高效的数字大脑。
+  <p>
+    <a href="https://github.com/Tomoyo-Kusosawa/Nexus/releases"><img src="https://img.shields.io/badge/Version-v1.0.2-cyan.svg?style=flat-square" alt="Version"></a>
+    <a href="https://github.com/vuejs/core"><img src="https://img.shields.io/badge/Vue.js-3.x-4FC08D.svg?style=flat-square&logo=vue.js" alt="Vue"></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?style=flat-square&logo=typescript" alt="TypeScript"></a>
+    <a href="https://www.nexusos.top"><img src="https://img.shields.io/badge/Website-nexusos.top-blue.svg?style=flat-square" alt="Website"></a>
+    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"></a>
+  </p>
 
-## 📌 核心设计理念
-
-科研工作者的痛苦往往在于工具的割裂：论文存本地、笔记散落在云端、半年后找不到当初跑通实验的代码版本。
-**NexusOS** 为此而生。它是一个完全 **本地优先（Local-First）** 的平台，所有核心数据完整保存在本机的 SQLite 数据库中。无需担心未发表的敏感成果泄露，您的知识资产完全属于您。
-
----
-
-## 🚀 核心功能矩阵
-
-### 1. 首页工作台 (Dashboard)
-自动梳理您的科研心智。展示今日必须推进的核心 P0 任务、即将到来的截稿雷达预警，以及您近期高频阅读与复现的活跃文献入口。
-
-### 2. 结构化研究工作区 (Research Workspace)
-*   **学术资产**：追踪个人论文的生命周期（草稿->审稿->录用），私密管理您的 API 密钥（Fernet 本地加密）。
-*   **时间中枢**：任务树结构拆解宏大目标，一键自动生成包含文献进展与代码推进的 **Markdown 组会周报**。
-*   **实验数据**：将论文与对应的本地代码目录、工业数据集地址强制绑定，保留环境依赖配置，保障 100% 实验可复现。
-*   **无限扩展的自定义面板**：开发者沙箱支持。您可以随意编写 HTML/JS 注入工作区组件，自由拖拽缩放构建专属大屏。
-
-### 3. 敏捷文献管线 (Literature Kanban)
-采用敏捷开发的看板模式管理文献阅读流：`待读 -> 略读 -> 精读 -> 复现中 -> 归档`。
-*   支持拖拽本地 PDF 自动提取解析元数据和 DOI。
-*   自动查重机制，完善的标签系统与一键复制 BibTeX。
-
-### 4. 全能 AI PDF 阅读器 (Paper Reader)
-内置深度定制的本地渲染引擎，摆脱外部依赖：
-*   **基础批注**：高亮、下划线、不遮挡文字的动态拉伸便签。
-*   **AI 赋能**：一键抽取长文本进行**大模型全文翻译**，告别机翻感。
-*   **多维右侧边栏**：AI 对话问答、相关文献推荐溯源、结构化 AI 总结、长笔记富文本编辑器（支持导出 PDF）。
-
-### 5. 论文工坊 (Paper Studio)
-专为学术撰写打造的富文本与 LaTeX 双向同步编辑器。
-*   **所见即所得**：插入公式、表格，引用管理一应俱全。
-*   **学术 Copilot**：选中文本原地翻译、生成公式推理、润色学术语气。
-*   **一键排版**：支持上传第三方顶级期刊的 `.zip` 模板包，本地一键调用 XeLaTeX 编译并弹出完美 PDF。
-*   **盲审模拟**：让 AI 扮演审稿专家对全篇进行结构与方法论的无情挑刺。
-
-### 6. 网状资源图谱 (Resource Graph)
-通过自由拖放连线，将原本孤立的论文、代码库、专利和读书笔记互相链接，形成真正的科研知识神经元网络。
+  <p>
+    <b>English</b> | <a href="./README_zh-CN.md">简体中文</a> | <a href="./README_zh-TW.md">繁體中文</a>
+  </p>
+</div>
 
 ---
 
-## 🛠️ 开始使用
+## 📖 Overview
 
-本项目前端基于 Vue 3 + TypeScript 构建。
+**NexusOS** is a comprehensive, local-first, AI-native academic workbench and personal research operating system designed for scholars, PhD candidates, researchers, and engineers. It eliminates fragmented workflows by unifying literature discovery, intelligent reading, LaTeX paper drafting, experimental asset management, and task scheduling into a single, cohesive, privacy-centric environment.
+
+---
+
+## ✨ Key Features & Architecture
+
+### 🤖 1. Global AI Super Agent & System Hub
+* **Dual-Pipeline Execution Engine:**
+  * **Standard Deterministic Pipeline:** Converts natural language instructions into validated, system-level JSON action batches for automatic task scheduling and data management.
+  * **Super Academic Writing Pipeline:** Powered by advanced multi-modal models, multi-turn reasoning, and sandboxed code execution.
+* **RAG & Style Cloning:** Mount reference PDFs to inject local vector retrieval context or clone the linguistic style, density, and academic tone of benchmark publications.
+* **Dynamic Skill Market:** Install, enable, or hot-reload specialized research skills and execution plugins directly from GitHub repositories.
+* **AI Resource Monitor:** Seamlessly tracks monthly Token throughput and monitors connection health across Ollama, OpenAI, DeepSeek, and custom LLM endpoints.
+
+### 📚 2. Literature Kanban & Intelligent Pipeline
+* **Visual Pipeline Workflow:** Drag-and-drop papers across custom stages: *To Read*, *Skim*, *Deep Read*, and *Reproducing*.
+* **Smart Ingestion & Deduplication:** Drag-and-drop PDF files to automatically parse title, authors, DOI, and year with built-in duplicate detection.
+* **Built-in Mirror Retriever:** Ingest papers by DOI via configurable mirror backends (e.g., SciDown).
+* **Archive Vault & Quick BibTeX:** Move completed papers to an archive repository or copy formatted BibTeX citations with one click.
+
+### 📖 3. Immersive AI PDF Reader
+* **Synchronized Dual-Pane Translation:** Simultaneous viewing of original PDF pages alongside AI-translated, Markdown-formatted content with synchronized scrolling.
+* **Multi-Format Annotations:** Floating toolbar for multi-color text highlights, underlines, and movable sticky note cards with academic tags (`Idea`, `Question`, `Todo`).
+* **Context-Aware Academic Copilot:** Interactive side-panel for document-level Q&A, structured summary extraction, and AI-powered related literature discovery.
+* **Integrated Long-Note Studio:** Write and preview structured Markdown notes synced with the global Knowledge Graph, exportable to `.md` or `.pdf`.
+
+### ✍️ 4. Paper Studio (Hybrid LaTeX & WYSIWYG Workspace)
+* **Seamless Hybrid Authoring:** Write effortlessly in a WYSIWYG rich-text canvas while retaining native LaTeX block isolation for complex math and tabular environments.
+* **Official Publication Templates:** Built-in templates for **IEEE Transactions** (Single/Two Column), **ACM Conferences** (`acmart`), **Nature/Springer**, and **Elsevier** (`elsarticle`), with custom `.zip` `.cls` package uploads.
+* **Local Real-Time Compilation:** Integrated with local TeXLive engines (`xelatex`, `pdflatex`) providing Overleaf-style debounced auto-compilation, live PDF synchronization, and compilation log parsing.
+* **Smart Cross-Referencing:** Intelligent popups for equations (`\ref{eq:...}`), figures (`\ref{fig:...}`), and bibliography citations (`\cite{...}`).
+* **Academic Review Copilot:** Generate Booktabs tables, polish sentences to formal academic tone, or simulate a comprehensive double-blind peer review report.
+
+### 🕸️ 5. Research Workspace & Topological Knowledge Graph
+* **Interactive Resource Graph:** Auto-maps and visualizes multi-dimensional relationships between your papers, datasets, notes, and code environments, featuring a Focused Micro-Topology Roaming Modal.
+* **Industrial Dataset Manager:** Organize local folders, online repositories, and automatically detect research bookmarks from Chrome, Edge, and Brave browsers.
+* **Experiment & IDE Console:** Connect datasets with code repositories and launch VS Code workspaces or copy CLI runtime commands instantly.
+* **Automated Weekly Meeting Reports:** Analyzes your weekly activity footprints (completed tasks, paper notes, studio edits) to generate structured markdown reports with AI polishing.
+
+### 🧩 6. Dynamic Workspace & Sandboxed Plugins
+* **Modular Dashboard:** Build custom views using built-in widgets (Infinite Calendar, Pomodoro Focus Timer, Contribution Graph, Deadline Radar).
+* **Sandboxed Custom Widgets:** Write custom HTML/JS/CSS widgets inside an iframe sandbox utilizing the `PHM.api` bridge to query local workspace metrics.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend Framework:** Vue 3 (Composition API), TypeScript, Vite
+* **Editor & Math Engine:** Tiptap, ProseMirror, KaTeX
+* **PDF Rendering:** PDF.js
+* **Styling & UI:** TailwindCSS, Lucide Icons
+* **Data Storage:** SQLite (Local-first, encrypted vault)
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (`>= 18.x`)
+- Git
+- Local TeXLive / MacTeX (Optional, required for local LaTeX PDF compilation)
+
+### Installation
 
 ```bash
-# 克隆仓库
-git clone https://github.com/Tomoyo-Kusosawa/NexusOS.git
+# 1. Clone the repository
+git clone https://github.com/Tomoyo-Kusosawa/Nexus.git
 
-# 进入目录
-cd NexusOS
+# 2. Navigate to project directory
+cd Nexus
 
-# 安装依赖
+# 3. Install dependencies
 npm install
 
-# 启动本地开发服务器
+# 4. Start development server
 npm run dev
 ```
 
-*(注：系统完整功能依赖搭配后端的 Python 引擎运行，详见 Backend 仓库说明。)*
+## 🔗 Official Links & Support
 
-## 🛡️ 隐私与安全承诺
-系统配置的各类敏感 API Key 会被强加密。加密使用的 `fernet.key` 独立存放在您的个人本地目录下，即便数据库文件被意外拷贝，没有物理环境下的密钥文件也绝无可能解密您的私密凭证。
+* 🌐 **Official Website:** [www.nexusos.top](https://www.nexusos.top)
+* ✉️ **Support & Feedback:** [support@nexusos.top](mailto:support@nexusos.top)
+* 🐛 **Bug Reports & Feature Requests:** [GitHub Issues](https://github.com/Tomoyo-Kusosawa/Nexus/issues)
 
-## 🤝 贡献与开源
-NexusOS 欢迎任何形式的贡献！提交 Issue 反馈 Bug，或开启 Pull Request 改进系统。
-> 反馈地址 📧：1539724046@qq.com
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
