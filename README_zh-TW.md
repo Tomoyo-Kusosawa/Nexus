@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="docs/logo.png" alt="NexusOS Logo" width="130" />
-  <h1>🚀 NexusOS</h1>
+  <img src="nexusos-icon.svg" alt="NexusOS Logo" width="130" />
+  <h1> NexusOS</h1>
   <p><strong>專為學者打造的終極 AI 原生個人科研與學習作業系統</strong></p>
 
   <p>
