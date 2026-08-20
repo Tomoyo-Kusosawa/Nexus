@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="docs/nexusos-icon.svg" alt="NexusOS Logo" width="130" />
-  <h1>🚀 NexusOS</h1>
+  <img src="nexusos-icon.svg" alt="NexusOS Logo" width="130" />
+  <h1> NexusOS</h1>
   <p><strong>The Ultimate AI-Native Personal Research & Learning Operating System</strong></p>
 
   <p>
